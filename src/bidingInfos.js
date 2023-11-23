@@ -6,9 +6,25 @@ const detail = {
   winnerPriceOption: "first-price",
 };
 
+const noStartDetail = {
+  bidDuration: 300,
+  bids: 2,
+  closesAfter: 0,
+  minimumBid: 1,
+  winnerPriceOption: "first-price",
+};
+
+const historyDetail = {
+  bidDuration: 300,
+  bids: [2,3],
+  closesAfter: 1,
+  minimumBid: 1,
+  winnerPriceOption: "first-price",
+};
+
 export const bidingInfos = {
-  'Anatoli Smorin': detail,
-  'Bobson Dugnutt': detail,
+  'Anatoli Smorin': noStartDetail,
+  'Bobson Dugnutt': historyDetail,
   'Darryl Archideld': detail,
   'Dean Wesrey': detail,
   'Dwigt Rortugal': detail,

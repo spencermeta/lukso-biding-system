@@ -78,7 +78,7 @@ const AuctionSessionDetail = ({
               ? 'No bid for now. Session will be started after the first bid.'
               : bids.map((amount, idx) => (
                   <Typography className={classes.historyItem} key={idx}>
-                    {amount.value}{' '}
+                    {amount}{' '}
                     {tokenPetname}
                   </Typography>
                 ))}
