@@ -6,7 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const toDateString = (bigIntTs) => {
   const ts = parseInt(bigIntTs.toString(), 10);
-  return new Date(ts * 1000).toISOString();
+  console.log('ts = ' + ts);
+  return new Date(Date.now() + ts * 1000).toISOString();
 };
 
 const useStyles = makeStyles((theme) => {
@@ -57,7 +58,7 @@ const AuctionSessionDetail = ({
       </Typography>
       <Typography className={classes.item}>
         <strong>Minimum bid:</strong>{' '}
-        {minimumBid.value}
+        {minimumBid}
       </Typography>
       {closesAfter ? (
         <Typography className={classes.item}>

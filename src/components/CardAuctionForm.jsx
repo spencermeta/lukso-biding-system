@@ -3,6 +3,7 @@ import Box from '@material-ui/core/Box';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Typography from '@material-ui/core/Typography';
@@ -54,7 +55,10 @@ const CardAuctionForm = ({ tokenPurses, tokenDisplayInfo, onSubmit }) => {
             setSelectedPurse(event.target.value);
           }}
         >
-
+          <MenuItem value={'LYX'}>LYX</MenuItem>
+          <MenuItem value={'LYXc'}>LYXc</MenuItem>
+          <MenuItem value={'LYXe'}>LYXe</MenuItem>
+          <MenuItem value={'LYXt'}>LYXt</MenuItem>
         </Select>
       </FormControl>
       <FormControl className={classes.item} fullWidth>
