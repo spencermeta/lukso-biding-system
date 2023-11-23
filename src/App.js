@@ -1,7 +1,7 @@
-import GlobalProvider, {GlobalContext} from './contexts/GlobalContext';
+import GlobalProvider from './contexts/GlobalContext';
 import './App.css';
 
-import {useState, useEffect, useContext} from 'react';
+import {useState,useEffect} from 'react';
 
 import Header from './components/Header.jsx';
 import CardDisplay from './components/CardDisplay.jsx';
@@ -10,6 +10,7 @@ import BoughtCardSnackbar from './components/BoughtCardSnackbar.jsx';
 
 import CardDetailModal from './components/CardDetailModal.jsx';
 import { cards } from './cards.js';
+import { bidingInfos} from "./bidingInfos";
 
 function App() {
 
@@ -17,13 +18,15 @@ function App() {
   const [needToApproveOffer, setNeedToApproveOffer] = useState(false);
   const [boughtCard, setBoughtCard] = useState(false);
   const [activeCard, setActiveCard] = useState(null);
-  const [tokenDisplayInfo, setTokenDisplayInfo] = useState(null);
+  //const [tokenDisplayInfo, setTokenDisplayInfo] = useState(null);
+  const tokenDisplayInfo = null;
+
 
   useEffect(() => {
     // Receive callbacks from the wallet connection.
-
     setAvailableCards(cards);
-  });
+
+  },[]);
 
   const handleCardClick = (name) => {
     setActiveCard(name);
@@ -34,15 +37,8 @@ function App() {
   };
 
   const handleGetCardDetail = (name) => {
-    let detail = {
-      bidDuration: 300,
-      bids: 2,
-      closesAfter: 1,
-      minimumBid: 1,
-      winnerPriceOption: "first-price",
-    };
     return new Promise(function (resolve, reject) {
-      resolve(detail);
+      resolve(bidingInfos[name]);
     });
   };
 
