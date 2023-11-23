@@ -1,6 +1,6 @@
 {
   "name": "lukso-biding-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "./",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
