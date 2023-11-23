@@ -83,7 +83,7 @@ const Header = () => {
       <AppBar position="sticky">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Lukso NFT Store
+            Player bidding services
           </Typography>
 
           <PowerSettingsNewIcon className={classes.icon} />
