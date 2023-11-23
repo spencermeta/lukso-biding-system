@@ -6,8 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const toDateString = (bigIntTs) => {
   const ts = parseInt(bigIntTs.toString(), 10);
-  console.log('ts = ' + ts);
-  return new Date(Date.now() + ts * 1000).toISOString();
+  return new Date(Date.now() + ts * 1000).toTimeString();
 };
 
 const useStyles = makeStyles((theme) => {
